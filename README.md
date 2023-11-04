@@ -19,7 +19,7 @@ https://julian69.github.io/ts-react-calendar/
 Run development server
 
 ```bash
-$ npm run start
+$ npm run dev
 ```
 
 Build
