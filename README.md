@@ -1,13 +1,13 @@
 ## Reminders Calendar!
 
-## Description
+### Description
 Simple reminders calendar where you'll be able to create, edit and remove reminders.
 It works on mobile and desktop.
 
-## Live Preview
+### Live Preview
 
 
-## Stack
+### Stack
 - React
 - React Context API
 - TypeScript
@@ -15,7 +15,7 @@ It works on mobile and desktop.
 - React testing library (comming soon...)
 - Github Actions & Pages (comming soon...)
 
-## Scripts
+### Scripts
 Run development server
 
 ```bash
@@ -34,6 +34,6 @@ Test
 $ npm run test
 ```
 
-## Preview
+### Preview
 ![image](https://github.com/julian69/ts-react-calendar/assets/6019858/1d8fa9c6-be37-4ff2-8f28-0396a16fdec7)
 
