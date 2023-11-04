@@ -13,7 +13,7 @@ https://julian69.github.io/ts-react-calendar/
 - TypeScript
 - Tailwing
 - React testing library (comming soon...)
-- Github Actions & Pages (comming soon...)
+- Github Actions & Pages 
 
 ### Scripts
 Run development server
