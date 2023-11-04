@@ -30,11 +30,8 @@ const Modal: FC = () => {
     setFormFields(newValues)
   }
 
-  const handleOnClose = () => {
-    handleModalChange()
-    handleSetSelectedDate()
-    handleSetSelectedReminder()
-  }
+  const handleOnClose = () => handleModalChange()
+  
 
   return (
     <Transition.Root show={isModalOpen} as={Fragment}>
