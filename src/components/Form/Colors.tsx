@@ -12,6 +12,7 @@ const Colors: FC<IField> = ({ value, onChange }) => (
           <button
             key={c}
             type="button"
+            value={value}
             onClick={() => onChange(FormFieldsNames.COLOR, c)}
             className={`p-4 shadow-sm ${c} w-5 h-5 rounded-full hover:opacity-70`} />
         )}

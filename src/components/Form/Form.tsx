@@ -20,7 +20,7 @@ const Form: FC<Props> = ({ formFields, onChange }) => (
           <Title value={formFields[FormFieldsNames.TITLE]} onChange={onChange} />
           <Date value={formFields[FormFieldsNames.DATE]} onChange={onChange} />
           <Description value={formFields[FormFieldsNames.DESCRIPTION]} onChange={onChange} />
-          <Colors value={formFields[FormFieldsNames.TITLE]} onChange={onChange} />
+          <Colors value={formFields[FormFieldsNames.COLOR]} onChange={onChange} />
         </div>
       </div>
     </div>

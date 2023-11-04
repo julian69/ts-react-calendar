@@ -1,10 +1,10 @@
 import { DaysNames, IWeeks } from '@/types/dates';
-import { IReminder } from "@/types/context";
+import { IReminder } from '@/types/reminders';
 import { addDays, addMonths, endOfMonth, endOfWeek, endOfYesterday, format, isBefore, isSameMonth, isToday, startOfMonth, startOfWeek, subMonths } from 'date-fns'
 
 export const sortRemindersByDate = (reminders: IReminder[]) => reminders.sort((a: IReminder, b: IReminder) => a.DATE.valueOf() - b.DATE.valueOf());
 
-export const isBeforeToday =  (date: Date):boolean => isBefore(date, endOfYesterday());
+export const isBeforeToday = (date: Date): boolean => isBefore(date, endOfYesterday());
 
 export const startOfCalendar = (date: Date): Date => startOfWeek(startOfMonth(date))
 
