@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+## Reminders Calendar!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Simple reminders calendar where you'll be able to create, edit and remove reminders.
+It works on mobile and desktop.
 
-Currently, two official plugins are available:
+## Live Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Stack
+- React
+- React Context API
+- TypeScript
+- Tailwing
+- React testing library (comming soon...)
+- Github Actions & Pages (comming soon...)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Scripts
+Run development server
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+$ npm run start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Build
+
+```bash
+$ npm run build
+```
+
+Test
+
+```bash
+$ npm run test
+```
+
+## Preview
+![image](https://github.com/julian69/ts-react-calendar/assets/6019858/1d8fa9c6-be37-4ff2-8f28-0396a16fdec7)
+
