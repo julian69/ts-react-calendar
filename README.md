@@ -5,7 +5,7 @@ Simple reminders calendar where you'll be able to create, edit and remove remind
 It works on mobile and desktop.
 
 ### Live Preview
-
+https://julian69.github.io/ts-react-calendar/
 
 ### Stack
 - React
