@@ -8,7 +8,7 @@ import { FormFieldsNames, IFormFields, IReminder } from '@/types/reminders'
 import { getInitialState } from './utils'
 
 const Modal: FC = () => {
-  const { date, isModalOpen, handleModalChange, handleSetSelectedDate, handleSetSelectedReminder, selectedDate, reminders, selectedReminderId } = useContext(AppContext);
+  const { date, isModalOpen, handleModalChange, selectedDate, reminders, selectedReminderId } = useContext(AppContext);
   const [formFields, setFormFields] = useState<IFormFields>(getInitialState(date))
 
   const activeReminder: IReminder = reminders.filter(r => r.id === selectedReminderId)[0]
