@@ -48,6 +48,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
       - name: Execute Unit tests
-          run: |
+          run: 
               npm ci
               npm run test
