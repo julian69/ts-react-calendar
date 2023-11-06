@@ -1,11 +1,10 @@
-
 import { FC, useContext } from 'react';
 
 import { AppContext } from '@/context/constants'
-import { classes } from './constants';
+import { classes } from './constants'
 
 const ModalButton: FC = () => {
-  const { handleModalChange } = useContext(AppContext);
+  const { handleModalChange } = useContext(AppContext)
 
   return (
     <button

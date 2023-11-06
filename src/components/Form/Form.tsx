@@ -1,9 +1,10 @@
 import { FC } from "react"
-import Title from "./Title";
-import Description from "./Description";
-import Colors from "./Colors";
-import Date from "./Date";
-import { FormFieldsNames, IFormFields } from "@/types/reminders";
+
+import Title from "./Title"
+import Description from "./Description"
+import Colors from "./Colors"
+import Date from "./Date"
+import { FormFieldsNames, IFormFields } from "@/types/reminders"
 
 interface Props {
   formFields: IFormFields;

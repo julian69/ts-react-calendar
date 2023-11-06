@@ -20,6 +20,8 @@ export const getMonthByDate = (month: Date): string => format(month, 'MMMM');
 
 export const getYearByDate = (year: Date): string => format(year, 'yyyy')
 
+export const formatDate = (date: Date): string => format(date, 'yyyy-MM-dd HH:mm')
+
 export const getWeeks = (date: Date): IWeeks[] => {
   let day = startOfCalendar(date);
   const end = endOfCalendar(date);

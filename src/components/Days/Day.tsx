@@ -1,11 +1,11 @@
 import { FC, memo } from 'react'
+import { isSameDay } from 'date-fns'
 
-import { classes } from "./constants";
-import Badge from './Badge';
-import Reminders from './Reminders';
-import { FormFieldsNames, IReminder } from '@/types/reminders';
-import { IWeeks } from '@/types/dates';
-import { isSameDay } from 'date-fns';
+import { classes } from "./constants"
+import Badge from './Badge'
+import Reminders from './Reminders'
+import { FormFieldsNames, IReminder } from '@/types/reminders'
+import { IWeeks } from '@/types/dates'
 
 interface Props {
   day: IWeeks,

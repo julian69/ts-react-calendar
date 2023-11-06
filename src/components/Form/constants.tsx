@@ -1,4 +1,4 @@
-import { FormFieldsNames } from "@/types/reminders";
+import { FormFieldsNames } from "@/types/reminders"
 
 export const colors = [
   'bg-purple-500',

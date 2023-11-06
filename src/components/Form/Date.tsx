@@ -2,11 +2,13 @@ import { FC, useContext } from "react"
 
 import { IDateField } from "./constants"
 import { FormFieldsNames } from "@/types/reminders"
-import { format, parseISO } from "date-fns"
+import { parseISO } from "date-fns"
 import { AppContext } from "@/context/constants"
+import { formatDate } from "@/lib/dates"
 
 const Date: FC<IDateField> = ({ value, onChange }) => {
   const { date } = useContext(AppContext)
+  const formattedToday = formatDate(date)
 
   return (
     <div className="sm:col-span-4">
@@ -18,9 +20,9 @@ const Date: FC<IDateField> = ({ value, onChange }) => {
             name="date"
             id="date"
             autoComplete="date"
-            value={format(value, 'yyyy-MM-dd HH:mm')}
-            min={format(date, 'yyyy-mm-dd HH:mm')}
-            onChange={e => onChange(FormFieldsNames.DATE, parseISO(e.target.value))}
+            value={formatDate(value)}
+            min={formattedToday}
+            onChange={e => onChange(FormFieldsNames.DATE, parseISO(e.target.value || formattedToday))}
             className="block flex-1 border-0 bg-transparent py-1.5 px-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" />
         </div>
       </div>

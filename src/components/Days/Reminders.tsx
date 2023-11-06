@@ -1,9 +1,9 @@
 import { FC } from "react"
 
-import { classes } from "./constants";
-import Reminder from '@/components/Reminder/Reminder';
-import { sortRemindersByDate } from "@/lib/dates";
-import { IReminder } from "@/types/reminders";
+import { classes } from "./constants"
+import Reminder from '@/components/Reminder/Reminder'
+import { sortRemindersByDate } from "@/lib/dates"
+import { IReminder } from "@/types/reminders"
 
 interface Props {
   reminders: IReminder[]

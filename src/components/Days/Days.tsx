@@ -5,7 +5,7 @@ import { AppContext } from '@/context/constants'
 import Day from './Day';
 
 const Days: FC = () => {
-  const { weeks, handleModalChange, handleSetSelectedDate, reminders } = useContext(AppContext);
+  const { weeks, handleModalChange, handleSetSelectedDate, reminders } = useContext(AppContext)
 
   const handleBadgeOnClick = useCallback((id: string, selectedDate: Date) => {
     handleSetSelectedDate({ id, selectedDate })

@@ -8,7 +8,7 @@ import { FormFieldsNames, IFormFields, IReminder } from '@/types/reminders'
 import { getInitialState } from './utils'
 
 const Modal: FC = () => {
-  const { date, isModalOpen, handleModalChange, selectedDate, reminders, selectedReminderId } = useContext(AppContext);
+  const { date, isModalOpen, handleModalChange, selectedDate, reminders, selectedReminderId, handleSetSelectedDate, handleSetSelectedReminder } = useContext(AppContext)
   const [formFields, setFormFields] = useState<IFormFields>(getInitialState(date))
 
   const activeReminder: IReminder = reminders.filter(r => r.id === selectedReminderId)[0]
@@ -30,7 +30,14 @@ const Modal: FC = () => {
     setFormFields(newValues)
   }
 
-  const handleOnClose = () => handleModalChange()
+  const handleOnClose = () => {
+    handleModalChange()
+    
+    if (!isModalOpen) {
+      handleSetSelectedDate()
+      handleSetSelectedReminder()
+    }
+  }
 
   return (
     <Transition.Root show={isModalOpen} as={Fragment}>

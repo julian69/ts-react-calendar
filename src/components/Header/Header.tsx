@@ -6,7 +6,7 @@ import { classes } from './constants'
 import { AppContext } from '@/context/constants'
 
 const Header: FC = () => {
-  const { month, year } = useContext(AppContext);
+  const { month, year } = useContext(AppContext)
 
   return (
     <header className={classes.header}>

@@ -1,8 +1,8 @@
 import { FC } from "react"
 
 import { classes } from "./constants"
-import { IWeeks } from "@/types/dates";
-import { isBeforeToday } from "@/lib/dates";
+import { IWeeks } from "@/types/dates"
+import { isBeforeToday } from "@/lib/dates"
 
 interface Props {
   data: Pick<IWeeks, 'date' | 'isToday' | 'dayName'>;

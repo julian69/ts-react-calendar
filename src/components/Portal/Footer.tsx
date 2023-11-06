@@ -1,10 +1,10 @@
 
-import { FC, useContext, useId } from 'react';
+import { FC, useContext, useId } from 'react'
 
 import { AppContext } from '@/context/constants'
-import { classes } from './constants';
-import { FormFieldsNames, IReminder } from '@/types/reminders';
-import { Optional } from '@/lib/types';
+import { classes } from './constants'
+import { FormFieldsNames, IReminder } from '@/types/reminders'
+import { Optional } from '@/lib/types'
 
 interface Props {
   formFields: Optional<IReminder, 'id'>;
@@ -15,7 +15,7 @@ const Footer: FC<Props> = ({ formFields, onClose }) => {
   const reminderId = useId()
   const { handleSetReminder, handleEditReminder, handleRemoveReminder } = useContext(AppContext)
 
-  const isDisabled = !formFields.TITLE.length || !formFields.COLOR.length;
+  const isDisabled = !formFields.TITLE.length || !formFields.COLOR.length
 
   const handleSave = () => {
     if (formFields?.id) {
