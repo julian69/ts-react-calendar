@@ -7,6 +7,6 @@ import Calendar from "./Calendar";
 describe('Calendar', () => {
   it('should render the calendar', () => {
     const { getByTestId } = render(<Calendar />)
-    expect( getByTestId('calendar')).toBeInTheDocument()
+    expect(getByTestId('calendar one')).toBeInTheDocument()
   });
 });
