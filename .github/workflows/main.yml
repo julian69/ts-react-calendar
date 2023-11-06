@@ -51,4 +51,5 @@ jobs:
           publish_dir: ./dist
       - name: Execute Unit tests
         run: |
+          npm install
           npm run test 
