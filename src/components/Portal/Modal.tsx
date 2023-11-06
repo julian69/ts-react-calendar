@@ -32,11 +32,8 @@ const Modal: FC = () => {
 
   const handleOnClose = () => {
     handleModalChange()
-    
-    if (!isModalOpen) {
-      handleSetSelectedDate()
-      handleSetSelectedReminder()
-    }
+    handleSetSelectedDate()
+    handleSetSelectedReminder()
   }
 
   return (

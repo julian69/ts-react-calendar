@@ -23,7 +23,7 @@ const Reminder: FC<Props> = ({ reminder }) => {
       aria-label="Remove reminder"
       onClick={() => handleReminderOnClick(reminder.id)}>
       <span className={`${classes.badge} ${reminder[FormFieldsNames.COLOR]}`}>
-        <span>{reminder[FormFieldsNames.TITLE]}</span>
+        <span className="overflow-hidden">{reminder[FormFieldsNames.TITLE]}</span>
       </span>
     </button>
   )
