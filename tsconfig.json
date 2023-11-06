@@ -29,6 +29,9 @@
       "@components/*": [
         "src/components/*"
       ],
+      "@mocks/*": [
+        "src/mocks/*"
+      ],
       "@assets/*": [
         "src/assets/*"
       ],
@@ -41,7 +44,12 @@
     },
   },
   "include": [
-    "src"
+    "src",
+    "setupTest.js"
+  ],
+  "types": [
+    "vitest/globals",
+    "@testing-library/jest-dom"
   ],
   "references": [
     {

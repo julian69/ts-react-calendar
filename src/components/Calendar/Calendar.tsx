@@ -7,7 +7,7 @@ import { classes } from './constants'
 
 const Calendar: FC = () => {
   return (
-    <section className={classes.container}>
+    <section className={classes.container} data-testid="calendar">
       <Header />
       <Weekdays />
       <Days />
