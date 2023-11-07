@@ -2,16 +2,13 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 
 import { formatDate, getDayId, getMonthByDate, getCalendarDays, getYearByDate, sortRemindersByDate } from './dates'
 import { mockedReminders } from '@/mocks/reminders'
-import mockedCalendarDays from '@/mocks/calendarDays'
 
 describe('Dates helpers', () => {
   beforeEach(() => {
-    // tell vitest we use mocked time
     vi.useFakeTimers()
   })
 
   afterEach(() => {
-    // restoring date after each test run
     vi.useRealTimers()
   })
 
