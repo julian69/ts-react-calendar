@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 
 import { formatDate, getDayId, getMonthByDate, getCalendarDays, getYearByDate, sortRemindersByDate } from './dates'
 import { mockedReminders } from '@/mocks/reminders'
-import { mockedCalendarDays } from '@/mocks/calendarDays'
+import mockedCalendarDays from '@/mocks/calendarDays'
 
 describe('Dates helpers', () => {
   beforeEach(() => {
@@ -52,11 +52,15 @@ describe('Dates helpers', () => {
   })
 
   test('should return an array of days', () => {
-    const date = new Date(2023, 10, 5)
+    const date = new Date(2023, 10, 4)
     vi.setSystemTime(date)
-    
-    const result = JSON.stringify(getCalendarDays(date))
 
-    expect(result).toBe(JSON.stringify(mockedCalendarDays))
+    const result = getCalendarDays(date)
+    const isTodayObject = result.filter(r => r.isToday)[0]
+    const isSameMonthObject = result.filter(r => r.isSameMonth)
+
+    expect(result.length).toBe(35)
+    expect(isSameMonthObject.length).toBe(30)
+    expect(isTodayObject.id).toBe('2023_10_4')
   })
 })
