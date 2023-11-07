@@ -52,14 +52,14 @@ export const mockedCalendarDays = [
     id: '2023_10_5',
     date: "2023-11-04T23:00:00.000Z",
     isSameMonth: true,
-    isToday: false,
+    isToday: true,
     dayName: '5'
   },
   {
     id: '2023_10_6',
     date: "2023-11-05T23:00:00.000Z",
     isSameMonth: true,
-    isToday: true,
+    isToday: false,
     dayName: '6'
   },
   {

@@ -1,10 +1,20 @@
-import { describe, expect, test } from 'vitest'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 
 import { formatDate, getDayId, getMonthByDate, getCalendarDays, getYearByDate, sortRemindersByDate } from './dates'
 import { mockedReminders } from '@/mocks/reminders'
-import { mockedCalendarDays } from '@/mocks/weeks'
+import { mockedCalendarDays } from '@/mocks/calendarDays'
 
 describe('Dates helpers', () => {
+  beforeEach(() => {
+    // tell vitest we use mocked time
+    vi.useFakeTimers()
+  })
+
+  afterEach(() => {
+    // restoring date after each test run
+    vi.useRealTimers()
+  })
+
   test('should sort reminders asc', () => {
     const result = sortRemindersByDate(mockedReminders)
     const resultTitles = JSON.stringify(result.map(r => r.TITLE))
@@ -28,21 +38,24 @@ describe('Dates helpers', () => {
   })
 
   test('should return a year string', () => {
-    const result = getYearByDate(new Date(2023, 10, 30)) 
+    const result = getYearByDate(new Date(2023, 10, 30))
     const expected = "2023"
 
     expect(result).toBe(expected)
   })
 
   test('should return a formatted date like yyyy-MM-dd HH:mm', () => {
-    const result = formatDate(new Date(2023, 10, 30)) 
+    const result = formatDate(new Date(2023, 10, 30))
     const expected = "2023-11-30 00:00"
 
     expect(result).toBe(expected)
   })
 
   test('should return an array of days', () => {
-    const result = JSON.stringify(getCalendarDays(new Date(2023, 10, 30)))
+    const date = new Date(2023, 10, 5)
+    vi.setSystemTime(date)
+    
+    const result = JSON.stringify(getCalendarDays(date))
 
     expect(result).toBe(JSON.stringify(mockedCalendarDays))
   })
