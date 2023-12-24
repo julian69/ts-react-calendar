@@ -1,4 +1,4 @@
-## Reminders Calendar! (IN PROGRESS)
+## Reminders Calendar! 
 
 ### Description
 Simple reminders calendar where you'll be able to create, edit and remove reminders.
